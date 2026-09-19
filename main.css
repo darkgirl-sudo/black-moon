@@ -1105,3 +1105,273 @@ nav a:hover {
     }
 
 }
+
+/* ========================================
+   NOVA CAPA - BLACK MOON
+======================================== */
+
+.inicio {
+    min-height: 720px;
+    height: calc(100vh - 80px);
+    max-height: 900px;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 48% 52%;
+    align-items: stretch;
+
+    position: relative;
+    overflow: hidden;
+    background: #030303;
+}
+
+
+/* FOTO CONJUNTO ALANA */
+
+.foto-inicio {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.foto-inicio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.foto-inicio::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        transparent 55%,
+        #030303 100%
+    );
+}
+
+
+/* TEXTO DA CAPA */
+
+.texto-inicio {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 70px 10% 70px 12%;
+}
+
+.detalhe {
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+    color: #888;
+}
+
+.texto-inicio h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(55px, 5vw, 82px);
+    font-weight: normal;
+    line-height: 1.02;
+    margin-bottom: 28px;
+    color: #fff;
+}
+
+.descricao {
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.botao {
+    position: relative;
+    z-index: 5;
+
+    display: inline-block;
+    padding: 17px 30px;
+
+    color: #111;
+    background: #f4f0ed;
+    border: 1px solid #fff;
+
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    transition: 0.3s ease;
+}
+
+.botao:hover {
+    background: #fff;
+    transform: translateY(-3px);
+}
+
+
+/* LUA DA NOVA CAPA 🌙 */
+
+.lua {
+    position: absolute;
+    z-index: 2;
+
+    width: 330px;
+    height: 330px;
+
+   right: 35px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 0 40px rgba(255, 255, 255, 0.08),
+        0 0 100px rgba(255, 255, 255, 0.04);
+
+    opacity: 0.7;
+}
+
+.lua::after {
+    content: "";
+    position: absolute;
+
+   width: 420px;
+height: 420px;
+
+    border-radius: 50%;
+
+    background: #030303;
+
+top: -30px;
+left: 85px;
+}
+
+/* LUA REALISTA DA CAPA */
+
+.inicio .lua {
+   width: 580px;
+height: 580px;
+
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    opacity: 0.65;
+}
+
+.inicio .lua::after {
+    display: none;
+}
+
+.inicio .lua img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* ========================================
+   RESPONSIVO - CELULAR
+======================================== */
+
+@media (max-width: 768px) {
+        header {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .logo {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+
+    .icones {
+        font-size: 17px;
+        gap: 15px;
+    }
+        .icones {
+        font-size: 17px;
+        gap: 15px;
+    }
+
+
+    /* CAPA NO CELULAR */
+
+    .inicio {
+        min-height: auto;
+        padding: 0;
+        display: block;
+    }
+
+    .foto-inicio {
+        width: 100%;
+        height: 440px;
+        position: relative;
+    }
+
+    .foto-inicio img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+    }
+    .texto-inicio {
+        position: relative;
+        width: 100%;
+        padding: 45px 30px 45px;
+        z-index: 3;
+    }
+
+    .detalhe {
+        font-size: 9px;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+    }
+
+    .texto-inicio h1 {
+        font-size: 48px;
+        line-height: 1.02;
+        letter-spacing: -1px;
+        margin-bottom: 22px;
+    }
+
+    .descricao {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 28px;
+    }
+
+    .botao {
+        padding: 15px 22px;
+        font-size: 10px;
+    }
+    .inicio .lua {
+    width: 430px;
+    height: 430px;
+right: -20px;
+top: 78%;
+    transform: translateY(-50%);
+}
+}
