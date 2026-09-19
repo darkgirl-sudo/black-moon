@@ -1,0 +1,1107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #050505;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #222222;
+}
+
+.logo {
+    font-size: 22px;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+.icones {
+    font-size: 20px;
+}
+
+.inicio {
+    min-height: calc(100vh - 80px);
+    padding: 0 10%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.texto-inicio {
+    position: relative;
+    z-index: 2;
+}
+
+.detalhe {
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    color: #bcbcbc;
+}
+
+.texto-inicio h1 {
+    font-family: Georgia, serif;
+    font-size: 70px;
+    font-weight: normal;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.descricao {
+    color: #bcbcbc;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 16px 28px;
+
+    color: #050505;
+    background: #f4f0ed;
+
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* LUA BLACK MOON */
+
+.lua {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: 10%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle at 35% 35%,
+        #ffffff,
+        #d8d8d8 25%,
+        #777777 55%,
+        #181818 75%
+    );
+
+    box-shadow:
+        0 0 30px rgba(255, 255, 255, 0.25),
+        0 0 80px rgba(255, 255, 255, 0.15),
+        0 0 160px rgba(255, 255, 255, 0.08);
+
+    opacity: 0.85;
+}
+.botao {
+    color: #111111;
+    border: 1px solid #ffffff;
+}
+
+.botao:hover {
+    color: #ffffff;
+    background: transparent;
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.25);
+}
+/* TRANSFORMA A LUA EM CRESCENTE */
+
+.lua {
+    width: 330px;
+    height: 330px;
+
+    background: transparent;
+
+    border-radius: 50%;
+
+    box-shadow:
+        -45px 15px 0 5px #f2eee9,
+        -55px 15px 35px rgba(255, 255, 255, 0.35),
+        -65px 15px 90px rgba(255, 255, 255, 0.18);
+
+    opacity: 0.95;
+}
+
+/* GARANTE O TEXTO DO BOTÃO */
+
+.botao {
+    color: #111111 !important;
+    background-color: #f2eee9;
+    font-weight: bold;
+}
+
+.botao:hover {
+    color: #ffffff !important;
+    background-color: transparent;
+}
+/* BRILHO SUAVE DA LUA */
+
+.lua {
+    animation: brilhoLua 4s ease-in-out infinite;
+}
+
+@keyframes brilhoLua {
+    0%, 100% {
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.20));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 28px rgba(255, 255, 255, 0.55));
+    }
+}
+/* SEÇÃO NOVIDADES */
+
+.novidades {
+    padding: 100px 10%;
+    background: #080808;
+    border-top: 1px solid #1f1f1f;
+}
+
+.titulo-novidades {
+    margin-bottom: 50px;
+}
+
+.titulo-novidades > p {
+    color: #aaaaaa;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.titulo-novidades h2 {
+    font-family: Georgia, serif;
+    font-size: 52px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.titulo-novidades span {
+    color: #888888;
+    font-size: 15px;
+}
+
+
+/* ORGANIZA OS PRODUTOS */
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+
+/* CADA PRODUTO */
+
+.produto {
+    position: relative;
+}
+
+.foto-produto {
+    width: 100%;
+    height: 430px;
+
+    background: #111111;
+    border: 1px solid #222222;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #555555;
+    font-size: 11px;
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+
+    transition: 0.4s ease;
+}
+
+
+/* EFEITO QUANDO PASSAR O MOUSE */
+
+.produto:hover .foto-produto {
+    transform: translateY(-6px);
+
+    border-color: #777777;
+
+    box-shadow:
+        0 0 15px rgba(255, 255, 255, 0.10),
+        0 0 40px rgba(255, 255, 255, 0.05);
+}
+
+
+/* NOME */
+
+.produto h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+
+/* PREÇO */
+
+.produto > p {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+
+/* VER PEÇA */
+
+.produto a {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    padding-bottom: 4px;
+    border-bottom: 1px solid #555555;
+
+    transition: 0.3s;
+}
+
+.produto a:hover {
+    border-color: #ffffff;
+}
+.foto-produto {
+    overflow: hidden;
+}
+
+.foto-produto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.produto:hover .foto-produto img {
+  transform: scale(1.05);
+}
+/* =================================
+   EXPLORE A BLACK MOON
+================================= */
+
+.explore {
+    padding: 110px 10%;
+    background: #050505;
+    border-top: 1px solid #1b1b1b;
+}
+
+.titulo-explore {
+    margin-bottom: 50px;
+}
+
+.titulo-explore > p {
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.titulo-explore h2 {
+    color: #fff;
+    font-family: Georgia, serif;
+    font-size: 52px;
+    font-weight: normal;
+}
+
+
+/* OS DOIS BLOCOS */
+
+.categorias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* CADA CATEGORIA */
+
+.categoria {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 70% 40%,
+            #252525 0%,
+            #111 35%,
+            #080808 70%
+        );
+
+    border: 1px solid #222;
+
+    display: flex;
+    align-items: flex-end;
+
+    transition: 0.5s ease;
+}
+
+
+/* BRILHO */
+
+.categoria::before {
+    content: "";
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background: rgba(255, 255, 255, 0.07);
+    filter: blur(80px);
+
+    top: -100px;
+    right: -100px;
+
+    opacity: 0;
+
+    transition: 0.6s ease;
+}
+
+.categoria:hover::before {
+    opacity: 1;
+}
+
+
+/* CONTEÚDO */
+
+.categoria-conteudo {
+    position: relative;
+    z-index: 2;
+
+    padding: 45px;
+}
+
+.categoria-conteudo span {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.categoria-conteudo h3 {
+    color: #fff;
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+    font-weight: normal;
+
+    margin: 10px 0 15px;
+}
+
+.categoria-conteudo p {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* LINK */
+
+.categoria-conteudo a {
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    padding-bottom: 5px;
+    border-bottom: 1px solid #555;
+
+    transition: 0.3s ease;
+}
+
+.categoria-conteudo a:hover {
+    border-color: #fff;
+}
+
+
+/* MOVIMENTO DO CARD */
+
+.categoria:hover {
+    transform: translateY(-6px);
+
+    border-color: #555;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.04);
+}
+/* FOTOS DAS CATEGORIAS */
+
+.categoria:first-child {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.45) 55%,
+            rgba(0, 0, 0, 0.15) 100%
+        ),
+        url("imagens/camisao-boston/Camisao boston.jpeg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.categoria:last-child {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.45) 55%,
+            rgba(0, 0, 0, 0.15) 100%
+        ),
+        url("imagens/Cropped over/Cropped over preto.jpeg");
+
+    background-size: cover;
+    background-position: center;
+}
+/* =================================
+   SOBRE A BLACK MOON
+================================= */
+
+.sobre-blackmoon {
+    padding: 130px 10%;
+    background: #080808;
+    border-top: 1px solid #1b1b1b;
+}
+
+.sobre-topo {
+    max-width: 1100px;
+}
+
+.sobre-detalhe {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 35px;
+}
+
+.sobre-topo h2 {
+    color: #fff;
+    font-family: Georgia, serif;
+    font-size: clamp(45px, 5vw, 78px);
+    line-height: 1.08;
+    font-weight: normal;
+    letter-spacing: -2px;
+}
+
+.sobre-topo h2 span {
+    color: #777;
+}
+
+
+/* PARTE DE BAIXO */
+
+.sobre-baixo {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 80px;
+
+    margin-top: 90px;
+    align-items: start;
+}
+
+.sobre-linha {
+    width: 100%;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        #555,
+        transparent
+    );
+}
+
+.sobre-texto p {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+.sobre-texto a {
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    padding-bottom: 6px;
+    border-bottom: 1px solid #555;
+
+    transition: 0.3s ease;
+}
+
+.sobre-texto a:hover {
+    border-color: #fff;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.5),
+        0 0 20px rgba(255,255,255,0.2);
+}
+/* =================================
+   RODAPÉ BLACK MOON
+================================= */
+
+.rodape {
+    position: relative;
+    overflow: hidden;
+
+    padding: 110px 10% 35px;
+
+    background: #030303;
+    border-top: 1px solid #1b1b1b;
+}
+
+
+/* LUA AO FUNDO */
+
+.lua-rodape {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+   right: 80px;
+   bottom: 20px;
+
+    box-shadow:
+        0 0 40px rgba(255, 255, 255, 0.05),
+        0 0 100px rgba(255, 255, 255, 0.03);
+}
+
+.lua-rodape::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: #030303;
+
+    top: -20px;
+   left: 55px;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+.rodape-conteudo {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 80px;
+
+    padding-bottom: 100px;
+}
+
+
+/* MARCA */
+
+.rodape-marca p {
+    color: #777;
+
+    font-size: 9px;
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+.rodape-marca h2 {
+    color: #fff;
+
+    font-family: Georgia, serif;
+    font-size: clamp(50px, 7vw, 100px);
+
+    font-weight: normal;
+    letter-spacing: 4px;
+}
+
+
+/* LINKS */
+
+.rodape-links {
+    display: flex;
+    gap: 100px;
+
+    padding-top: 15px;
+}
+
+.rodape-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    min-width: 140px;
+}
+
+.rodape-coluna span {
+    color: #666;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.rodape-coluna a {
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.rodape-coluna a:hover {
+    color: #fff;
+
+    transform: translateX(4px);
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.35);
+}
+
+
+/* PARTE FINAL */
+
+.rodape-final {
+    position: relative;
+    z-index: 2;
+
+    border-top: 1px solid #1b1b1b;
+
+    padding-top: 25px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #555;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+/* ========================================
+   PÁGINA LOJA - BLACK MOON
+======================================== */
+
+.pagina-loja {
+    background: #030303;
+    color: #f5f2ee;
+    min-height: 100vh;
+}
+
+/* TOPO DA LOJA */
+
+.topo-loja {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 140px 40px 110px;
+    border-bottom: 1px solid #222;
+}
+
+.topo-loja > p {
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+    color: #999;
+}
+
+.topo-loja h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(60px, 8vw, 120px);
+    font-weight: normal;
+    line-height: 0.9;
+    margin: 0 0 35px;
+}
+
+.topo-loja span {
+    color: #999;
+    font-size: 15px;
+}
+
+
+/* ÁREA DOS PRODUTOS */
+
+.area-produtos-loja {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 40px 150px;
+}
+
+.cabecalho-produtos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.cabecalho-produtos p {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.cabecalho-produtos h2 {
+    font-family: Georgia, serif;
+    font-size: 45px;
+    font-weight: normal;
+}
+
+
+/* FILTROS */
+
+.filtros-loja {
+    display: flex;
+    gap: 10px;
+}
+
+.filtros-loja button {
+    background: transparent;
+    color: #aaa;
+    border: 1px solid #333;
+    padding: 12px 22px;
+    cursor: pointer;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.filtros-loja button:hover {
+    background: #f5f2ee;
+    color: #030303;
+    border-color: #f5f2ee;
+}
+
+
+/* GRADE */
+
+.grade-loja {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+
+/* CARD */
+
+.card-loja {
+    position: relative;
+}
+
+.imagem-loja {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #111;
+}
+
+.imagem-loja img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.card-loja:hover .imagem-loja img {
+    transform: scale(1.04);
+}
+
+
+/* INFORMAÇÕES */
+
+.info-loja {
+    padding-top: 20px;
+}
+
+.info-loja h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.info-loja p {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.info-loja a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #555;
+    transition: 0.3s;
+}
+
+.info-loja a:hover {
+    border-color: #fff;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 900px) {
+
+    .grade-loja {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cabecalho-produtos {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .topo-loja {
+        padding: 100px 20px 70px;
+    }
+
+    .area-produtos-loja {
+        padding: 70px 20px 100px;
+    }
+
+    .grade-loja {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros-loja {
+        flex-wrap: wrap;
+    }
+}
+/* ========================================
+   PÁGINA DE PRODUTO - BLACK MOON
+======================================== */
+
+.pagina-produto {
+    background: #030303;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.produto-detalhes {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 40px 120px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: start;
+}
+
+
+/* FOTO */
+
+.produto-fotos {
+    width: 100%;
+}
+
+.produto-foto-principal {
+    width: 100%;
+    max-height: 780px;
+    overflow: hidden;
+    background: #111;
+}
+
+.produto-foto-principal img {
+    width: 100%;
+    height: 100%;
+    max-height: 780px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* INFORMAÇÕES */
+
+.produto-informacoes {
+    padding-top: 40px;
+    max-width: 520px;
+}
+
+.produto-categoria {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.produto-informacoes h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(45px, 5vw, 72px);
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.produto-preco {
+    color: #ddd;
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+
+.produto-linha {
+    width: 100%;
+    height: 1px;
+    background: #292929;
+    margin-bottom: 35px;
+}
+
+
+/* TAMANHO E DESCRIÇÃO */
+
+.produto-tamanho,
+.produto-descricao {
+    margin-bottom: 35px;
+}
+
+.produto-tamanho span,
+.produto-descricao span {
+    display: block;
+    color: #777;
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.produto-tamanho p,
+.produto-descricao p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* BOTÃO COMPRAR */
+
+.botao-comprar {
+    display: block;
+    width: 100%;
+    padding: 20px;
+
+    background: #fff;
+    color: #030303;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    margin-top: 45px;
+    transition: 0.3s ease;
+}
+
+.botao-comprar:hover {
+    background: #d8d8d8;
+    transform: translateY(-2px);
+}
+
+
+/* VOLTAR */
+
+.voltar-loja {
+    display: inline-block;
+    color: #777;
+    text-decoration: none;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    margin-top: 30px;
+    transition: 0.3s ease;
+}
+
+.voltar-loja:hover {
+    color: #fff;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 850px) {
+
+    .produto-detalhes {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 20px 80px;
+    }
+
+    .produto-informacoes {
+        padding-top: 0;
+        max-width: 100%;
+    }
+
+}
