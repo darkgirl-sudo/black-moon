@@ -1292,7 +1292,7 @@ height: 580px;
    RESPONSIVO - CELULAR
 ======================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
         header {
         height: 70px;
         padding: 0 20px;
